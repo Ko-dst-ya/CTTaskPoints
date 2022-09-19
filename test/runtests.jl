@@ -59,7 +59,7 @@ maints *= let ts = ScoredTestSet("Точка в квадрате (расшире
 end
 
 maints *= let ts = ScoredTestSet("Центр масс")
-    ts *= @scoredtest center(i * Point(1, 1) for i in 1:10) == Point(5.5, 5.5) name="Без указания области" award=AWARD2
+    ts *= @scoredtest center([i * Point(1, 1) for i in 1:10]) == Point(5.5, 5.5) name="Без указания области" award=AWARD2
 
     try
         points = [Point(x, y) for x in -2:2, y in -2:2]
